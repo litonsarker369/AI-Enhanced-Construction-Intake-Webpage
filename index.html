@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildVision AI - AI-Enhanced Custom Construction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="home" style="width: 24px; height: 24px; color: white;"></i>
+                </div>
+                BuildVision AI
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#ai-studio">AI Studio</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-cta" onclick="scrollToForm()">Start Project</button>
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileNav()">
+            <i data-lucide="x" style="width: 30px; height: 30px;"></i>
+        </button>
+        <a href="#hero" onclick="toggleMobileNav()">Home</a>
+        <a href="#services" onclick="toggleMobileNav()">Services</a>
+        <a href="#ai-studio" onclick="toggleMobileNav()">AI Studio</a>
+        <a href="#projects" onclick="toggleMobileNav()">Projects</a>
+        <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-shapes">
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    AI-Powered Construction
+                </div>
+                <h1>Build Your Dream <span class="gradient">Vision</span> With AI</h1>
+                <p>Experience the future of custom construction. Our AI-powered platform delivers intelligent renderings, accurate cost estimates, and seamless project management—all in one place.</p>
+                <div class="hero-buttons">
+                    <a href="#intake-form" class="btn btn-primary">
+                        <i data-lucide="rocket"></i>
+                        Start Your Project
+                    </a>
+                    <a href="#ai-studio" class="btn btn-secondary">
+                        <i data-lucide="sparkles"></i>
+                        Explore AI Studio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive construction solutions powered by cutting-edge AI technology</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80') right bottom/contain no-repeat;">
+                    <div class="service-icon">
+                        <i data-lucide="home" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Custom Homes</h3>
+                    <p>Build your perfect home from the ground up with AI-assisted design and planning</p>
+                </div>
+                <div class="service-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80') right bottom/contain no-repeat;">
+                    <div class="service-icon">
+                        <i data-lucide="hammer" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Renovations</h3>
+                    <p>Transform existing spaces with smart renovation solutions and virtual previews</p>
+                </div>
+                <div class="service-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80') right bottom/contain no-repeat;">
+                    <div class="service-icon">
+                        <i data-lucide="building-2" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Commercial</h3>
+                    <p>Professional commercial construction with AI-powered project management</p>
+                </div>
+                <div class="service-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80') right bottom/contain no-repeat;">
+                    <div class="service-icon">
+                        <i data-lucide="scan-line" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>AI Rendering</h3>
+                    <p>Generate photorealistic building renderings in minutes with our AI engine</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Studio Section -->
+    <section class="ai-studio" id="ai-studio">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI Studio</h2>
+                <p>Powerful AI tools to visualize, estimate, and plan your construction project</p>
+            </div>
+            <div class="ai-panel">
+                <div class="ai-tabs">
+                    <button class="ai-tab active" data-tab="renderer">
+                        <i data-lucide="image"></i>
+                        Building Renderer
+                    </button>
+                    <button class="ai-tab" data-tab="estimator">
+                        <i data-lucide="calculator"></i>
+                        Cost Estimator
+                    </button>
+                    <button class="ai-tab" data-tab="chat">
+                        <i data-lucide="message-circle"></i>
+                        AI Chat
+                    </button>
+                </div>
+                
+                <!-- Building Renderer -->
+                <div class="ai-content active" id="renderer">
+                    <div class="ai-input-group">
+                        <label>Describe your dream building</label>
+                        <textarea class="ai-textarea" id="renderDescription" placeholder="e.g., A modern two-story house with floor-to-ceiling windows, flat roof, and sleek minimalist design..."></textarea>
+                    </div>
+                    <div class="ai-input-group">
+                        <label>Select Style</label>
+                        <div class="style-presets">
+                            <button class="style-preset active" data-style="modern">Modern</button>
+                            <button class="style-preset" data-style="traditional">Traditional</button>
+                            <button class="style-preset" data-style="contemporary">Contemporary</button>
+                            <button class="style-preset" data-style="minimalist">Minimalist</button>
+                            <button class="style-preset" data-style="luxury">Luxury</button>
+                        </div>
+                    </div>
+                    <button class="ai-btn" onclick="generateRendering()">
+                        <i data-lucide="sparkles"></i>
+                        Generate Rendering
+                    </button>
+                    <div class="ai-result" id="renderResult">
+                        <div class="ai-result-image" style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.8), rgba(22, 33, 62, 0.9)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80') center/cover;">
+                            <span class="placeholder-text">AI-Generated Rendering</span>
+                        </div>
+                        <p style="color: var(--text-light);">Your building rendering has been generated. This is a simulation for demonstration purposes.</p>
+                    </div>
+                </div>
+
+                <!-- Cost Estimator -->
+                <div class="ai-content" id="estimator">
+                    <div class="ai-input-group">
+                        <label>Project Type</label>
+                        <select class="ai-select" id="projectType">
+                            <option value="new">New Construction</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="addition">Home Addition</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+                    <div class="ai-input-group">
+                        <label>Square Footage</label>
+                        <input type="number" class="ai-input" id="squareFootage" placeholder="e.g., 2500">
+                    </div>
+                    <div class="ai-input-group">
+                        <label>Number of Bedrooms</label>
+                        <input type="number" class="ai-input" id="bedrooms" placeholder="e.g., 4">
+                    </div>
+                    <div class="ai-input-group">
+                        <label>Number of Bathrooms</label>
+                        <input type="number" class="ai-input" id="bathrooms" placeholder="e.g., 3">
+                    </div>
+                    <button class="ai-btn" onclick="calculateCost()">
+                        <i data-lucide="calculator"></i>
+                        Calculate Estimate
+                    </button>
+                    <div class="ai-result" id="costResult">
+                        <div class="cost-breakdown">
+                            <div class="cost-item">
+                                <span>Foundation & Framing</span>
+                                <span id="foundationCost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Exterior & Roofing</span>
+                                <span id="exteriorCost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Interior Finishes</span>
+                                <span id="interiorCost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Plumbing & Electrical</span>
+                                <span id="mechanicalCost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Permits & Contingency (10%)</span>
+                                <span id="permitsCost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Estimated Total</span>
+                                <span id="totalCost">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Chat -->
+                <div class="ai-content" id="chat">
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="chat-message ai">
+                                Hello! I'm your AI construction assistant. I can help you with project planning, cost estimates, design questions, and more. How can I assist you today?
+                            </div>
+                        </div>
+                        <div class="chat-typing" id="chatTyping">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="quick-questions">
+                            <button class="quick-question" onclick="sendQuickQuestion('What is the typical timeline for a custom home?')">Timeline?</button>
+                            <button class="quick-question" onclick="sendQuickQuestion('How does the AI rendering work?')">AI Rendering?</button>
+                            <button class="quick-question" onclick="sendQuickQuestion('What is included in the cost estimate?')">Cost Estimate?</button>
+                            <button class="quick-question" onclick="sendQuickQuestion('Do you offer financing options?')">Financing?</button>
+                        </div>
+                        <div class="chat-input-area">
+                            <input type="text" class="ai-input" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeypress(event)">
+                            <button class="ai-btn" onclick="sendChatMessage()">
+                                <i data-lucide="send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intake Form Section -->
+    <section class="intake-form" id="intake-form">
+        <div class="container">
+            <div class="section-header">
+                <h2>Start Your Project</h2>
+                <p>Tell us about your vision and we'll bring it to life</p>
+            </div>
+            <div class="form-wizard">
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span>Personal</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span>Project</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span>Specs</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">
+                        <span class="step-number">4</span>
+                        <span>Photos</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="5">
+                        <span class="step-number">5</span>
+                        <span>Review</span>
+                    </div>
+                </div>
+                
+                <div class="form-steps">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Personal Information</h3>
+                        <p>Let's start with your contact details</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name <span class="required">*</span></label>
+                                <input type="text" class="form-input" id="fullName" placeholder="John Doe">
+                                <span class="error-message">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address <span class="required">*</span></label>
+                                <input type="email" class="form-input" id="email" placeholder="john@example.com">
+                                <span class="error-message">Please enter a valid email</span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number <span class="required">*</span></label>
+                                <input type="tel" class="form-input" id="phone" placeholder="(555) 123-4567">
+                                <span class="error-message">Please enter your phone number</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Contact Method</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="contactMethod" value="email" checked>
+                                        Email
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="contactMethod" value="phone">
+                                        Phone
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="contactMethod" value="both">
+                                        Both
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Project Details -->
+                    <div class="form-step" data-step="2">
+                        <h3>Project Details</h3>
+                        <p>Tell us about your construction project</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Project Type <span class="required">*</span></label>
+                                <select class="form-input" id="projectTypeSelect">
+                                    <option value="">Select project type</option>
+                                    <option value="new-construction">New Construction</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="addition">Home Addition</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                                <span class="error-message">Please select a project type</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Estimated Timeline</label>
+                                <select class="form-input" id="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-3months">1-3 Months</option>
+                                    <option value="3-6months">3-6 Months</option>
+                                    <option value="6-12months">6-12 Months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Property Address</label>
+                            <input type="text" class="form-input" id="propertyAddress" placeholder="123 Main Street, City, State">
+                        </div>
+                        <div class="form-group">
+                            <label>Budget Range</label>
+                            <select class="form-input" id="budget">
+                                <option value="">Select budget range</option>
+                                <option value="100k-250k">$100,000 - $250,000</option>
+                                <option value="250k-500k">$250,000 - $500,000</option>
+                                <option value="500k-1m">$500,000 - $1,000,000</option>
+                                <option value="1m-plus">$1,000,000+</option>
+                                <option value="not-sure">Not Sure Yet</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Specifications -->
+                    <div class="form-step" data-step="3">
+                        <h3>Specifications</h3>
+                        <p>Help us understand your requirements</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Square Footage</label>
+                                <input type="number" class="form-input" id="sqft" placeholder="e.g., 2500">
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Bedrooms</label>
+                                <input type="number" class="form-input" id="bedroomCount" placeholder="e.g., 4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Number of Bathrooms</label>
+                            <input type="number" class="form-input" id="bathroomCount" placeholder="e.g., 3">
+                        </div>
+                        <div class="form-group">
+                            <label>Style Preferences</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="style" value="modern">
+                                    Modern
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="style" value="traditional">
+                                    Traditional
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="style" value="contemporary">
+                                    Contemporary
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="style" value="minimalist">
+                                    Minimalist
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="style" value="mediterranean">
+                                    Mediterranean
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="style" value="rustic">
+                                    Rustic
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Must-Have Features</label>
+                            <textarea class="form-input" id="mustHave" rows="4" placeholder="List any specific features or requirements..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Site Photos -->
+                    <div class="form-step" data-step="4">
+                        <h3>Site Photos</h3>
+                        <p>Upload photos of your property site</p>
+                        
+                        <div class="upload-zone" id="uploadZone">
+                            <i data-lucide="upload" style="width: 48px; height: 48px;"></i>
+                            <p>Drag & drop photos here or <span>browse</span></p>
+                            <p style="font-size: 0.875rem; color: #999;">PNG, JPG up to 10MB each</p>
+                        </div>
+                        <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                        <div class="upload-preview" id="uploadPreview"></div>
+                    </div>
+
+                    <!-- Step 5: Review -->
+                    <div class="form-step" data-step="5">
+                        <h3>Review & Submit</h3>
+                        <p>Please review your information before submitting</p>
+                        
+                        <div class="review-summary">
+                            <div class="review-section">
+                                <h4>
+                                    Personal Information
+                                    <button type="button" onclick="goToStep(1)">Edit</button>
+                                </h4>
+                                <div class="review-item"><span>Name:</span> <span id="reviewName">-</span></div>
+                                <div class="review-item"><span>Email:</span> <span id="reviewEmail">-</span></div>
+                                <div class="review-item"><span>Phone:</span> <span id="reviewPhone">-</span></div>
+                                <div class="review-item"><span>Contact via:</span> <span id="reviewContact">-</span></div>
+                            </div>
+                            <div class="review-section">
+                                <h4>
+                                    Project Details
+                                    <button type="button" onclick="goToStep(2)">Edit</button>
+                                </h4>
+                                <div class="review-item"><span>Type:</span> <span id="reviewProjectType">-</span></div>
+                                <div class="review-item"><span>Address:</span> <span id="reviewAddress">-</span></div>
+                                <div class="review-item"><span>Timeline:</span> <span id="reviewTimeline">-</span></div>
+                                <div class="review-item"><span>Budget:</span> <span id="reviewBudget">-</span></div>
+                            </div>
+                            <div class="review-section">
+                                <h4>
+                                    Specifications
+                                    <button type="button" onclick="goToStep(3)">Edit</button>
+                                </h4>
+                                <div class="review-item"><span>Size:</span> <span id="reviewSize">-</span></div>
+                                <div class="review-item"><span>Bedrooms:</span> <span id="reviewBedrooms">-</span></div>
+                                <div class="review-item"><span>Bathrooms:</span> <span id="reviewBathrooms">-</span></div>
+                                <div class="review-item"><span>Features:</span> <span id="reviewFeatures">-</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon">
+                            <i data-lucide="check" style="width: 50px; height: 50px;"></i>
+                        </div>
+                        <h3>Project Submitted Successfully!</h3>
+                        <p>Thank you for your submission. Our team will review your project details and get back to you within 24-48 hours. We've also sent a confirmation email to your inbox.</p>
+                    </div>
+
+                    <div class="form-nav" id="formNav">
+                        <button class="btn-back" id="btnBack" onclick="prevStep()" style="visibility: hidden;">
+                            <i data-lucide="arrow-left"></i>
+                            Back
+                        </button>
+                        <button class="btn-next" id="btnNext" onclick="nextStep()">
+                            Next
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Projects</h2>
+                <p>Explore our portfolio of completed and ongoing construction projects</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="planning">Planning</button>
+                <button class="filter-btn" data-filter="in-progress">In Progress</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-status="planning">
+                    <div class="project-image" style="background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80') center/cover;">
+                        <span class="project-status planning">Planning</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Lake House</h3>
+                        <p>Custom lakefront property with panoramic views</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Planning Phase</span>
+                                <span>15%</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn" onclick="openProjectModal('Modern Lake House', 'Planning', 15, 'A stunning modern lakefront residence featuring floor-to-ceiling windows, an open-concept living space, and a private dock. The design maximizes natural light and integrates seamlessly with the surrounding landscape.')">
+                                <i data-lucide="eye"></i> View
+                            </button>
+                            <button class="project-btn">
+                                <i data-lucide="message-square"></i> Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-status="in-progress">
+                    <div class="project-image" style="background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80') center/cover;">
+                        <span class="project-status in-progress">In Progress</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Urban Loft Renovation</h3>
+                        <p>Complete renovation of historic downtown loft</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Construction</span>
+                                <span>65%</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn" onclick="openProjectModal('Urban Loft Renovation', 'In Progress', 65, 'A full-scale renovation of a historic downtown loft, preserving original brick walls while adding modern amenities. Features include exposed beams, custom millwork, and a chef\'s kitchen.')">
+                                <i data-lucide="eye"></i> View
+                            </button>
+                            <button class="project-btn">
+                                <i data-lucide="message-square"></i> Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-status="completed">
+                    <div class="project-image" style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80') center/cover;">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Family Estate Home</h3>
+                        <p>Spacious family home with smart home features</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Completed</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn" onclick="openProjectModal('Family Estate Home', 'Completed', 100, 'A luxurious 5,000 sq ft family estate featuring smart home technology throughout, a gourmet kitchen, home theater, and a resort-style backyard with pool and spa.')">
+                                <i data-lucide="eye"></i> View
+                            </button>
+                            <button class="project-btn">
+                                <i data-lucide="message-square"></i> Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-status="planning">
+                    <div class="project-image" style="background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80') center/cover;">
+                        <span class="project-status planning">Planning</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Commercial Office Complex</h3>
+                        <p>Modern office space with sustainable design</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 10%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Planning Phase</span>
+                                <span>10%</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn" onclick="openProjectModal('Commercial Office Complex', 'Planning', 10, 'A 50,000 sq ft Class A office complex featuring LEED Platinum certification, rooftop solar, and cutting-edge smart building technology.')">
+                                <i data-lucide="eye"></i> View
+                            </button>
+                            <button class="project-btn">
+                                <i data-lucide="message-square"></i> Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-status="in-progress">
+                    <div class="project-image" style="background: url('https://images.unsplash.com/photo-1598928636135-d146006ff4be?w=600&q=80') center/cover;">
+                        <span class="project-status in-progress">In Progress</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Backyard ADU</h3>
+                        <p>Accessory dwelling unit for guests</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Foundation</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn" onclick="openProjectModal('Backyard ADU', 'In Progress', 40, 'A stylish 800 sq ft accessory dwelling unit featuring a full kitchen, bathroom, and sleeping area. Perfect for guests or rental income.')">
+                                <i data-lucide="eye"></i> View
+                            </button>
+                            <button class="project-btn">
+                                <i data-lucide="message-square"></i> Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-status="completed">
+                    <div class="project-image" style="background: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80') center/cover;">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Pool House Pavilion</h3>
+                        <p>Outdoor entertainment space</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Completed</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn" onclick="openProjectModal('Pool House Pavilion', 'Completed', 100, 'A beautiful poolside pavilion featuring exposed timber beams, outdoor kitchen, bar seating, and retractable screens for year-round enjoyment.')">
+                                <i data-lucide="eye"></i> View
+                            </button>
+                            <button class="project-btn">
+                                <i data-lucide="message-square"></i> Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>Hear what our clients have to say about their experience</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-avatar" style="background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80') center/cover;"></div>
+                    <p class="testimonial-quote">"The AI rendering feature was incredible! We could see exactly what our dream home would look like before we even broke ground. The team brought our vision to life perfectly."</p>
+                    <p class="testimonial-author">Michael Johnson</p>
+                    <p class="testimonial-role">Modern Lake House - Completed</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80') center/cover;"></div>
+                    <p class="testimonial-quote">"The cost estimator gave us such accurate projections that we stayed within budget throughout the entire build. The AI chat feature answered all our questions instantly."</p>
+                    <p class="testimonial-author">Sarah Rodriguez</p>
+                    <p class="testimonial-role">Family Estate Home - Completed</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&q=80') center/cover;"></div>
+                    <p class="testimonial-quote">"Building our custom home was stress-free thanks to the AI-powered project management. We always knew what was happening and could communicate directly through the portal."</p>
+                    <p class="testimonial-author">Thomas Chen</p>
+                    <p class="testimonial-role">Urban Loft Renovation - In Progress</p>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-dot active" onclick="goToTestimonial(0)"></button>
+                    <button class="testimonial-dot" onclick="goToTestimonial(1)"></button>
+                    <button class="testimonial-dot" onclick="goToTestimonial(2)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to start your project? Contact us today for a free consultation and let's bring your vision to life.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Address</h4>
+                                <p>123 Construction Way, Suite 100<br>Building City, BC 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Phone</h4>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Email</h4>
+                                <p>info@buildvision.ai</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Hours</h4>
+                                <p>Mon-Fri: 8am - 6pm<br>Sat: 9am - 2pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" class="form-input" id="contactName" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-input" id="contactEmail" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-input" id="contactMessage" rows="5" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button class="submit-btn" onclick="submitContactForm()">
+                        <i data-lucide="send"></i>
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i data-lucide="home" style="width: 24px; height: 24px; color: white;"></i>
+                        </div>
+                        BuildVision AI
+                    </a>
+                    <p>Transforming the construction industry with AI-powered solutions. Building dreams, one pixel at a time.</p>
+                    <div class="footer-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Custom Homes</a></li>
+                        <li><a href="#">Renovations</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">AI Rendering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BuildVision AI. All rights reserved.</p>
+                <p>Powered by Artificial Intelligence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Details</h3>
+                <button class="modal-close" onclick="closeProjectModal()">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-project-image" style="background: linear-gradient(135deg, var(--accent-secondary), var(--secondary)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80') center/cover;"></div>
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <h4>Status</h4>
+                        <p id="modalStatus">-</p>
+                    </div>
+                    <div class="modal-meta-item">
+                        <h4>Progress</h4>
+                        <p id="modalProgress">-</p>
+                    </div>
+                </div>
+                <p class="modal-description" id="modalDescription">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
